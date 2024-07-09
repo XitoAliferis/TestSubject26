@@ -1,13 +1,15 @@
 # Test Subject 26
 
 ## Description
-Test Subject 26 is a roguelike game developed using Unity, where players control a robot designed to look and think like a human. The player navigates through procedurally generated floors, engaging in turn-based battles and solving puzzles, to uncover the truth about their identity and powers. 
+Test Subject 26 is an immersive roguelike game developed using Unity. Players navigate procedurally generated floors, engaging in turn-based battles and solving puzzles to uncover the truth about their identity and powers. The protagonist, Test Subject 26, is a robot designed to look and think like a human, who believes they are part of an experiment to grant magical powers.
 
 ## Table of Contents
 - [Project Description](#project-description)
 - [Game Design](#game-design)
 - [Story Line](#story-line)
 - [Rules](#rules)
+- [Structural Design](#structural-design)
+- [Behavioral Design](#behavioral-design)
 - [Individual Contributions](#individual-contributions)
   - [Carmel Kurland](#carmel-kurland)
   - [Xristopher Aliferis](#xristopher-aliferis)
@@ -17,7 +19,7 @@ Test Subject 26 is a roguelike game developed using Unity, where players control
 - [Resources](#resources)
 
 ## Project Description
-Test Subject 26 offers an immersive gaming experience where players delve into procedurally generated floors, battling enemies and solving puzzles. The protagonist, Test Subject 26, believes they are part of an experiment to grant magical powers, only to discover that they are actually a robot equipped with advanced technology.
+Test Subject 26 offers an immersive gaming experience where players delve into procedurally generated floors, battling enemies and solving puzzles. The protagonist, Test Subject 26, believes they are part of an experiment to gain magical powers, only to discover that they are actually a robot equipped with advanced technology.
 
 ## Game Design
 - **Procedurally Generated Environment:** Utilizes dynamic and static grid tiles for diverse 3D floor designs.
@@ -42,34 +44,44 @@ Test Subject 26 is unaware of their true nature as a robot and believes they vol
 - **Boss Battles and Puzzles:** Encounter handcrafted challenges on specific floors.
 - **Character Customization:** Customize characters between runs.
 
+## Structural Design
+The game uses a combination of procedurally generated and handcrafted floor designs. Dynamic and static grid tiles create varied indoor environments, enhancing replayability and player engagement.
+
+## Behavioral Design
+Player and enemy behaviors are driven by class-based systems. Enemies roam the floors, engaging players in turn-based combat upon collision. Players use elemental attacks with strategic strengths and weaknesses, managing health and special points to survive and progress.
+
 ## Individual Contributions
 
 ### Carmel Kurland
-- Implemented the "Tile Subsystem" for dynamic and static grid tiles.
-- Developed the HallwaysAndRoomsFloorGenerator for procedural floor generation.
-- Created Tile Decorators for game object spawn points.
-- Added enemies, decoration, and objects to floors using floor processors.
-- Managed floor settings and generation with the AccentManager.
-- Designed custom shaders for a semi-cell-shaded visual style.
-- Created a test tileset for development.
+- **Tile Subsystem:** Defined dynamic and static grid tiles for floor generation.
+- **HallwaysAndRoomsFloorGenerator:** Created the main procedural floor generator.
+- **Tile Decorators:** Defined spawn points for game objects on tiles.
+- **Floor Processors:** Added enemies, decoration, and objects to procedurally generated floors.
+- **AccentManager:** Managed floor settings and generation during gameplay.
+- **Custom Shaders:** Developed shaders for a semi-cell-shaded look.
+- **Test Tileset:** Created a tileset for development use.
 
 ### Xristopher Aliferis
-- Developed Combatant classes, including PlayerCombatant and MonsterCombatant.
-- Implemented BasicAttack and ElementalAttack classes with damage values and animations.
-- Created a test scene to demonstrate combat mechanics.
+- **Combatant Class:** Developed PlayerCombatant and MonsterCombatant classes with health and movement attributes.
+- **Move Class:** Implemented BasicAttack and ElementalAttack classes with damage values and animations.
+- **Critical Damage:** Added critical damage mechanics and visual cues for attacks.
+- **Elemental Affinity:** Integrated elemental affinity effects in attacks.
+- **Test Scene:** Created a test scene to demonstrate combat mechanics.
 
 ### Michelle Menor
-- Implemented the PlayerAvatar class for navigation and boundary establishment.
-- Developed the PlayerCameraController class for consistent player visibility.
-- Created the RoamingMonster class for dynamic enemy behavior and battle triggers.
+- **Overworld Obstacles:** Implemented obstacles such as lasers, acid, and fog.
+- **Items:** Added collectible items like HealthBox and Test tubes for HP and SP recovery.
+- **RoamingMonster Class:** Enabled dynamic enemy behavior and battle triggers.
 
 ### Grace Neville
-- Developed the GameStateManager class for managing game states and object loading.
-- Implemented the BattleCameraManager class for camera repositioning during combat.
+- **GameStateManager Class:** Managed different game states and object loading/unloading.
+- **BattleCameraManager Class:** Repositioned the camera during turn-based combat encounters.
+- **UI Implementation:** Developed UI for end scenes, stat increases, and trait displays.
 
 ### Nilufer Karaman
-- Created a global singleton class for managing player-related values.
-- Ensured data integrity with validation logic.
+- **Global Singleton Class:** Managed player-related values like health and special points.
+- **Data Integrity:** Ensured data integrity with validation logic.
+- **Dialogue Box and Announcement Box:** Added features for immersive storytelling and player updates.
 
 ## Resources
 - [Gameplay Video](https://www.youtube.com/watch?v=PmzGXjRh3Kw)
