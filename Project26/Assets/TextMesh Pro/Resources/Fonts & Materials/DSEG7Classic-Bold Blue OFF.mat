@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-187714202236533948
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 9
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DSEG7Classic-Bold Blue OFF
+  m_Shader: {fileID: -6465566751694194690, guid: 9ca04698ba5aa9e478df3c7394ed08e3,
+    type: 3}
+  m_Parent: {fileID: 2100000, guid: da6a0f2b98b44434fb9ebe4d05cbaf52, type: 2}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2999
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _Fizz: 0
+    - _QueueControl: 1
+    - _QueueOffset: -1
+    m_Colors:
+    - _Color: {r: 0.23317909, g: 0.5001452, b: 0.6179246, a: 0.18431373}
+    - _Glow_Color: {r: 0.29191878, g: 0.5951179, b: 0.9669811, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
